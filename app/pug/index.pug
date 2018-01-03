@@ -1,0 +1,68 @@
+extends layouts/main
+
+block variables
+    - var title = "Главная"
+block content
+    .content__container
+        .content__main.content__main--bg-img
+            .content__row.container
+                .container__header
+                    h2.container__h2.container__h2--style_white Олимпиады
+                .container__body
+                    .olymps.blocks
+                        .olymps__wrap.blocks__wrap
+                            .olymps__elem.frame.frame--style_shadow
+                                .olymps__header
+                                    h3.olymps__h3.frame__header История
+                                    p.olymps__date= 'Февраль '
+                                        span 2018
+                                .olymps__body
+                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants
+                                        i.far.fa-user.olymps__user-icon
+                                        | Участников:
+                                        span= ' 1 750'
+                        .olymps__wrap.blocks__wrap
+                            .olymps__elem.frame.frame--style_shadow
+                                .olymps__header
+                                    h3.olymps__h3.frame__header Администрирование компьютерных систем
+                                    p.olymps__date= 'Февраль '
+                                        span 2018
+                                .olymps__body
+                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants
+                                        i.far.fa-user.olymps__user-icon
+                                        | Участников:
+                                        span= ' 1 750'
+                        .olymps__wrap.blocks__wrap
+                            .olymps__elem.frame.frame--style_shadow
+                                .olymps__header
+                                    h3.olymps__h3.frame__header Конкурс научно-исследовательских работ “Физика перспективных материалов”
+                                    p.olymps__date= 'Февраль '
+                                        span 2018
+                                .olymps__body
+                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants
+                                        i.far.fa-user.olymps__user-icon
+                                        | Участников:
+                                        span= ' 1 750'
+
+    .content__container
+        .content__main
+            .content__row.container
+                .container__header
+                    h2.container__h2 Документы
+                .container__body
+                    .documents.blocks
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Администрирование Компьютерных систем»
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Истории»
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Физике»

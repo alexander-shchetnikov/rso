@@ -1,0 +1,36 @@
+extends layouts/main
+
+block variables
+    - var title = "Контакты"
+block content
+    .content__container
+        .content__main
+            .content__row.container
+                .container__header
+                    h2.container__h2 Контакты
+                .container__body
+                    .contacts.blocks
+                        .contacts__wrap.blocks__wrap
+                            .contacts__elem.frame.frame--style_border
+                                h2.contacts__header.frame__header Контактное лицо
+                                .contacts__body
+                                    .contacts__top
+                                        p.contacts__name Порохнов Андрей Николаевич
+                                        p.contacts__desc м.н.с., Председатель Совета Молодых ученых КемГУ
+                                    .contacts__bottom
+                                        p.contacts__phone.contacts__item
+                                            i.fas.fa-phone.contacts__icon
+                                            | +7 (900) 057-24-10
+                                        p.contacts__mail.contacts__item
+                                            i.fas.fa-envelope.contacts__icon
+                                            | porohnov@gmail.com
+                        .contacts__wrap.blocks__wrap
+                            .contacts__elem.frame.frame--style_border
+                                h2.contacts__header.frame__header Техническая поддержка
+                                .contacts__body
+                                    .contacts__top
+                                        p.contacts__name Отдел поддержки и сопровождения
+                                    .contacts__bottom
+                                        p.contacts__mail.contacts__item
+                                            i.fas.fa-envelope.contacts__icon
+                                            | vso-support@kemsu.ru
