@@ -1,0 +1,16 @@
+.frame
+  padding: 30px
+  background: #FFF
+  box-sizing: border-box
+  @import "_header"
+  &--style
+    &_shadow
+      border-radius: 5px
+      box-shadow: 0px 0px 50px rgba(0,0,0,0.1)
+    &_border
+      border-radius: 0px
+      border: 1px solid transparent
+      -moz-border-image: -moz-linear-gradient(top right, #ECECEC 0%, #DBDBDB 100%)
+      -webkit-border-image: -webkit-linear-gradient(top right, #ECECEC 0%, #DBDBDB 100%)
+      border-image: linear-gradient(to bottom left, #ECECEC 0%, #DBDBDB 100%)
+      border-image-slice: 1

@@ -1,0 +1,24 @@
+extends layouts/main
+
+block variables
+    - var title = "Документы"
+block content
+    .content__container
+        .content__main
+            .content__row.container
+                .container__header
+                    h2.container__h2 Документы
+                .container__body
+                    .documents.blocks
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Администрирование Компьютерных систем»
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Истории»
+                        .documents__wrap.blocks__wrap
+                            a(href='#').documents__elem.frame.frame--style_border
+                                i.far.fa-file-word.documents__ext
+                                p.documents__name Положение об организации и проведении ВСО по «Физике»
