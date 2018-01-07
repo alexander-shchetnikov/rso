@@ -1,0 +1,84 @@
+extends layouts/auth
+
+block variables
+    - var title = "Регистрация"
+
+block content
+    .content__container
+        .content__main.content__main--ta_center
+            .content__row.content__row--display_i-b
+                .container__body
+                    .auth.frame.frame--style_shadow
+                        h2.auth__header.frame__header Регистрация участника
+                        .frame__body
+                            form.auth__form.form
+                                .form__body
+                                    .form__container.form__container--style_columns
+                                        .form__col
+                                            .form__input-wrap
+                                                label.label.form__input-label Имя
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Фамилия
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Отчество
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Пол:
+                                                .form__input
+                                                    input(type="radio",name="gender").input.input--type_radio
+                                                    label.label.label--style_radio Мужской
+                                                    input(type="radio",name="gender").input.input--type_radio
+                                                    label.label.label--style_radio Женский
+                                            .form__input-wrap
+                                                label.label.form__input-label Электронная почта
+                                                .form__input
+                                                    input(type="email",required).input.input--type_email
+                                            .form__input-wrap
+                                                label.label.form__input-label Номер телефона
+                                                .form__input
+                                                    input(type="text",placeholder="+7 (___) ___ __-__",required).input.input--type_text
+                                        .form__col
+                                            .form__input-wrap
+                                                label.label.form__input-label Город
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Место обучения
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Факультет
+                                                .form__input
+                                                    input(type="text",required).input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Дата рождения
+                                                .form__input
+                                                    input(type="text",required,placeholder="__.__.____").input.input--type_text
+                                            .form__input-wrap
+                                                label.label.form__input-label Пароль
+                                                .form__input
+                                                    input(type="password",required).input.input--type_password
+                                            .form__input-wrap
+                                                label.label.form__input-label Повторите пароль
+                                                .form__input
+                                                    input(type="password",required).input.input--type_password
+                                    .form__container
+                                        .form__input-wrap.form__input-wrap--style_h
+                                            .form__input.form__offer
+                                                input(type="checkbox",required).input.input--type_checkbox
+                                                label.label.label--f-z_12= "Я прочитал и согласен с условиями "
+                                                a(href="#").form__link.link ”Пользовательского соглашения”
+                                            a(href="./index_login.html").button.button--king-blue Регистрация
+                                .form__footer
+                                    a(href="./index.html").form__link.form__home-link.link
+                                        i.fas.fa-home.link__icon
+                                        | Вернуться на главную
+
+
+
+

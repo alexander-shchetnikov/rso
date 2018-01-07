@@ -1,0 +1,9 @@
+extends index
+
+block variables
+    -
+        var title = "Главная"
+        var login = true
+block linkToOlymp
+    if login
+        a(href="./olymp.html").olymps__link.button.button--king-blue-2 Перейти к олимпиаде

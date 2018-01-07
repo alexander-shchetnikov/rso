@@ -1,11 +1,22 @@
 .button
+  display: inline-block
   font-size: 14px
   padding: 8px 15px
   border-radius: 5px
   line-height: 18px
+  transition: 0.230s
+  transition-property: border-color,box-shadow
   &--king-blue
     background: $blue
     color: #FFFFFF
     border: 1px solid darken($blue,10)
     &:hover
+      cursor: pointer
       box-shadow: 0px 0px 0px 2px transparentize($blue,0.75)
+    &-2
+      background: #FFF
+      border: 1px solid $blue
+      color: $blue
+      transition-property: border-color,box-shadow,background,color
+      &:hover
+        @extend .button--king-blue

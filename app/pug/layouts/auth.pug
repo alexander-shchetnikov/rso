@@ -1,0 +1,35 @@
+doctype html
+
+block variables
+    -
+        var title
+
+
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/main.css")
+        script(defer,src="https://use.fontawesome.com/releases/v5.0.2/js/all.js")
+        title= title
+    body
+        .wrapper
+            .wrapper__header
+                .content
+                    .content__container.content__container--display_f
+                            .content__row.content__row--display_i-b
+                                .header.content__main
+                                    .logo
+                                        .logo__container
+                                            .logo__img-container
+                                                img.logo__img(src="img/vso_v.png")
+                                            .logo__text-container
+                                                h3.logo__h3 Кемеровский государственный университет
+                                                h2.logo__h2
+                                                    | Всероссийская студенческая олимпиада
+                                                    br
+                                                    | 2017 / 2018
+            .wrapper__body
+                .content.body
+                    block content
+

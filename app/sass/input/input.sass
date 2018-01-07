@@ -1,0 +1,16 @@
+.input
+  &:not([type="radio"]):not([type="checkbox"])
+    border-radius: 5px
+    border: 1px solid #DDD
+    box-sizing: border-box
+    width: 240px
+    padding: 8px 15px
+    transition: 0.230s
+    transition-property: border-color,box-shadow
+    &:hover
+      border-color: transparentize($blue,0.50)
+    &:focus
+      border-color: $blue
+      box-shadow: 0px 0px 0px 2px transparentize($blue,0.75)
+  &--type_radio, &--type_checkbox
+    margin-right: 5px
