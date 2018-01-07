@@ -5,6 +5,7 @@
   + [Watch (default)](https://github.com/alexander-shchetnikov/rso/new/master?readme=1#watch-default)
   + [Build](https://github.com/alexander-shchetnikov/rso/new/master?readme=1#build)
   + [Clean](https://github.com/alexander-shchetnikov/rso/new/master?readme=1#clean)
+#### [Ссылка на проект в FIGMA](https://www.figma.com/file/c0JBM0GjESvFfg1DFtPsYboZ/RSO)
 ---
 ### Необходимый софт:
 - [nodeJS](https://nodejs.org/en/)
