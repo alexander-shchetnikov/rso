@@ -1,0 +1,54 @@
+extends layouts/main
+
+block variables
+    - var login = true
+    - var participant = false
+    - var tested = false
+    - var title = "Конкурс научно-исследовательских работ “Физика перспективных материалов”"
+block content
+    .content__container.content__main--bg-img
+        .content__main.content__main--bc_black
+            .content__row.container.container--p-t_30
+                .container__body
+                    .olymps.blocks
+                        .olymps__row.blocks__wrap
+                            .olymps__wrap
+                                .olymps__elem.frame.frame--transparent
+                                    h2.frame__header.frame__header--bold
+                                        | Конкурс научно-исследовательских работ “Физика перспективных материалов”
+                                    .frame__body
+                                        p.olymps__participants.olymps__participants--bold
+                                            i.fas.fa-user.olymps__user-icon.olymps__user-icon--bold
+                                            | Участников:
+                                            span= ' 1 750'
+                                        if !participant
+                                            button.olymps__link.button.button--king-blue Участвовать
+                                        else
+                                            button.olymps__link.button.button--king-blue-2 Вы участвуете
+                        .olymps__row.blocks__wrap
+                            .olymps__wrap
+                                .frame.frame--style_shadow.olymp-data-frame.olymp-data-frame--multicolor
+                                    h2.frame__header.olymp-data-frame__header.olymp-data-frame__header--white
+                                        i.fas.fa-star.olymp-data-frame__header-icon.olymp-data-frame__header-icon--gold
+                                        | Ваш результат:
+                                        if tested
+                                            i.olymp-data-frame__rating-number= " 7 "
+                                            | место
+                                    .frame__body.olymp-data-frame__body
+                                        if !tested
+                                            p.olymp-data-frame__p.olymp-data-frame__p--white Вы еще не прошли тестирование
+                                            if !participant
+                                                button(disabled="disabled").button.button--white-blue.olymp-data-frame__button.button--disabled Начать тестирование
+                                            else
+                                                button.button.button--white-blue.olymp-data-frame__button Начать тестирование
+                                        else
+                                            p.olymp-data-frame__p.olymp-data-frame__p--white 15 правильных ответов из 30
+                                            p.olymp-data-frame__p.olymp-data-frame__p--white.olymp-data-frame__p--bold 50%
+                            .olymps__wrap
+                                .frame.frame--style_shadow.olymp-data-frame
+                                    h2.frame__header.olymp-data-frame__header
+                                        i.fas.fa-calendar-alt.olymp-data-frame__header-icon
+                                        | Дата проведения:
+                                    .frame__body.olymp-data-frame__body
+                                        p.olymp-data-frame__p Отборочный этап: 10 Января - 31 Января
+                                        p.olymp-data-frame__p Основной этап: 16 Февраля - 17 Февраля

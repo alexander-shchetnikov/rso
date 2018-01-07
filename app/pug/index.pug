@@ -3,8 +3,8 @@ extends layouts/main
 block variables
     - var title = "Главная"
 block content
-    .content__container
-        .content__main.content__main--bg-img
+    .content__container.content__main--bg-img
+        .content__main.content__main--bc_black
             .content__row.container
                 .container__header
                     h2.container__h2.container__h2--style_white Олимпиады
@@ -17,9 +17,9 @@ block content
                                     p.olymps__date= 'Февраль '
                                         span 2018
                                 .olymps__body
-                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
-                                    p.olymps__participants
-                                        i.far.fa-user.olymps__user-icon
+                                    p.olymps__info.olymps__p Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants.olymps__p
+                                        i.fas.fa-user.olymps__user-icon
                                         | Участников:
                                         span= ' 1 750'
                                     block linkToOlymp
@@ -30,9 +30,9 @@ block content
                                     p.olymps__date= 'Февраль '
                                         span 2018
                                 .olymps__body
-                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
-                                    p.olymps__participants
-                                        i.far.fa-user.olymps__user-icon
+                                    p.olymps__info.olymps__p Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants.olymps__p
+                                        i.fas.fa-user.olymps__user-icon
                                         | Участников:
                                         span= ' 1 750'
                                     block linkToOlymp
@@ -43,9 +43,9 @@ block content
                                     p.olymps__date= 'Февраль '
                                         span 2018
                                 .olymps__body
-                                    p.olymps__info Отборочный этап: 10 Января - 31 Января
-                                    p.olymps__participants
-                                        i.far.fa-user.olymps__user-icon
+                                    p.olymps__info.olymps__p Отборочный этап: 10 Января - 31 Января
+                                    p.olymps__participants.olymps__p
+                                        i.fas.fa-user.olymps__user-icon
                                         | Участников:
                                         span= ' 1 750'
                                     block linkToOlymp

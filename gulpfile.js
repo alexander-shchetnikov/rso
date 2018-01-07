@@ -3,7 +3,6 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     pug = require('gulp-pug'),
     gutil = require( 'gulp-util' ),
-    ftp = require( 'vinyl-ftp' ),
     del  = require('del'),
     autoprefixer  = require('gulp-autoprefixer'),
     concat      = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
@@ -80,31 +79,6 @@ gulp.task('clean',function(){
 
 gulp.task('clear', function () {
     return cache.clearAll();
-});
-
-gulp.task('deploy',function () {
-    var conn = ftp.create({
-        host:        'vso-test.kemsu.ru',
-        user:        'vso',
-        password:    '6C22DB5f0d',
-        parallel:    10,
-        log:         'gutil.log'
-    });
-
-    var globs = [
-        "app/css/**",
-        "app/*.html",
-        "app/js/**",
-        "app/fonts/**",
-        "app/img/**"
-    ];
-
-    return gulp.src(globs,{
-        base: './app/',
-        buffer: false
-    })
-        .pipe( conn.newer( '/vso/' ) ) // only upload newer files
-        .pipe( conn.dest( '/vso/' ) );
 });
 
 gulp.task('build',['clean','pug','css-libs','scripts'],function(){
