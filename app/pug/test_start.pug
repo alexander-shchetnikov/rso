@@ -1,0 +1,23 @@
+extends layouts/test
+
+block content
+    .content__container
+        .content__main.content__main--ta_center
+            .content__row.content__row--display_i-b
+                .container__body
+                    .confirm.frame.frame--style_shadow
+                        h2.frame__header
+                            span.frame__header--light= 'Тестирование по '
+                            | Администрирование компьютерных систем
+                        .frame__body
+                            p.p.frame__p
+                                | Вы действительно хотите начать тестирование по “Администрирование компьютерных систем” ?
+                            p.p.p--bold.frame__p
+                                | У вас будет 1 попытка
+                            p.p.p--small
+                                | Количество вопросов: 30
+                                br
+                                | Время на тестирование: 45 минут
+                            .frame__block.confirm__control-panel
+                                a(href="./test.html").button.button--green Начать
+                                a(href="./index_login.html").button.button--red Отменить

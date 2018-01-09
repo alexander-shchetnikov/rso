@@ -8,7 +8,6 @@
   transition-property: border-color,box-shadow
   &:hover
     cursor: pointer
-
   &--king-blue
     background: $blue
     color: #FFFFFF
@@ -28,5 +27,17 @@
     color: $blue
   &--disabled
     opacity: 0.5
+  &--green
+    background: $green
+    border: 1px solid darken($green,15)
+    color: #FFFFFF
+    &:hover
+      box-shadow: 0px 0px 0px 2px transparentize($green,0.65)
+  &--red
+    background: $red
+    border: 1px solid darken($red,20)
+    color: #FFFFFF
+    &:hover
+      box-shadow: 0px 0px 0px 2px transparentize($red,0.75)
 
 

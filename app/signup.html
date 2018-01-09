@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/libs.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <title>Регистрация</title>
   </head>
@@ -42,80 +43,80 @@
                           <div class="form__container form__container--style_columns">
                             <div class="form__col">
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Имя</label>
+                                <label class="label form__input-label" for="fName">Имя</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fName" type="text" name="user['firstName']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Фамилия</label>
+                                <label class="label form__input-label" for="fSecondName">Фамилия</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fSecondName" type="text" name="user['secondName']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Отчество</label>
+                                <label class="label form__input-label" for="fMiddleName">Отчество</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fMiddleName" type="text" name="user['middleName']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Пол:</label>
+                                <label class="label form__input-label">Пол</label>
                                 <div class="form__input">
-                                  <input class="input input--type_radio" type="radio" name="gender">
-                                  <label class="label label--style_radio">Мужской</label>
-                                  <input class="input input--type_radio" type="radio" name="gender">
-                                  <label class="label label--style_radio">Женский</label>
+                                  <input class="input input--type_radio" type="radio" name="user['gender']" value="male" id="fGenderMale"/>
+                                  <label class="label label--style_radio" for="fGenderMale">Мужской</label>
+                                  <input class="input input--type_radio" type="radio" name="user['gender']" value="female" id="fGenderFemale"/>
+                                  <label class="label label--style_radio" for="fGenderFemale">Женский</label>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Электронная почта</label>
+                                <label class="label form__input-label" for="fEmail">Электронная почта</label>
                                 <div class="form__input">
-                                  <input class="input input--type_email" type="email" required>
+                                  <input class=".input--type_email input" required="required" id="fEmail" type="email" name="user['email']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Номер телефона</label>
+                                <label class="label form__input-label" for="fPhone">Номер телефона</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" placeholder="+7 (___) ___ __-__" required>
+                                  <input class=".input--type_text input" required="required" id="fPhone" type="text" name="user['phone']" placeholder="+7 (___) ___ __-__"/>
                                 </div>
                               </div>
                             </div>
                             <div class="form__col">
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Город</label>
+                                <label class="label form__input-label" for="fCity">Город</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fCity" type="text" name="user['city']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Место обучения</label>
+                                <label class="label form__input-label" for="fUniversity">Место обучения</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fUniversity" type="text" name="user['university']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Факультет</label>
+                                <label class="label form__input-label" for="fFaculty">Факультет</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required>
+                                  <input class=".input--type_text input" required="required" id="fFaculty" type="text" name="user['faculty']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Дата рождения</label>
+                                <label class="label form__input-label" for="fDate">Дата рождения</label>
                                 <div class="form__input">
-                                  <input class="input input--type_text" type="text" required placeholder="__.__.____">
+                                  <input class=".input--type_text input" required="required" id="fDate" type="text" name="user['date']" placeholder="__.__.____"/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Пароль</label>
+                                <label class="label form__input-label" for="fPassword">Пароль</label>
                                 <div class="form__input">
-                                  <input class="input input--type_password" type="password" required>
+                                  <input class=".input--type_password input" required="required" id="fPassword" type="password" name="user['password']" placeholder=" "/>
                                 </div>
                               </div>
                               <div class="form__input-wrap">
-                                <label class="label form__input-label">Повторите пароль</label>
+                                <label class="label form__input-label" for="fRePassword">Повторите пароль</label>
                                 <div class="form__input">
-                                  <input class="input input--type_password" type="password" required>
+                                  <input class=".input--type_password input" required="required" id="fRePassword" type="password" name="user['rePassword']" placeholder=" "/>
                                 </div>
                               </div>
                             </div>
@@ -123,8 +124,8 @@
                           <div class="form__container">
                             <div class="form__input-wrap form__input-wrap--style_h">
                               <div class="form__input form__offer">
-                                <input class="input input--type_checkbox" type="checkbox" required>
-                                <label class="label label--f-z_12">Я прочитал и согласен с условиями </label><a class="form__link link" href="#">”Пользовательского соглашения”</a>
+                                <input class="input input--type_checkbox" type="checkbox" required id="fOffer">
+                                <label class="label label--f-z_12" for="fOffer">Я прочитал и согласен с условиями </label><a class="form__link link" href="#">”Пользовательского соглашения”</a>
                               </div><a class="button button--king-blue" href="./index_login.html">Регистрация</a>
                             </div>
                           </div>
@@ -140,5 +141,6 @@
         </div>
       </div>
     </div>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,29 @@
+mixin formList(list)
+    for item in list
+        .form__input-wrap
+            if item.type != 'radio' && item.type != 'checkbox'
+                label(for=""+item.id).label.form__input-label= item.label
+                if !item.placeholder
+                    - item.placeholder = " "
+
+                .form__input
+                    input(required,
+                        id=""+ item.id
+                        type="" + item.type,
+                        class=".input--type_" + item.type
+                        name="" + item.name
+                        placeholder=""+ item.placeholder
+                        ).input
+            else
+                if item.type = 'radio'
+                    label.label.form__input-label= item.label
+                    .form__input
+                        - for (var i = 0; i < item.rLabels.length; i++)
+                            - var id = "" + item.id + item.rValues[i].charAt(0).toUpperCase() + item.rValues[i].substr(1).toLowerCase()
+                            input(
+                                type="radio",
+                                name=""+item.name,
+                                value=""+item.rValues[i],
+                                id=""+id
+                            ).input.input--type_radio
+                            label(for=""+id).label.label--style_radio= item.rLabels[i]

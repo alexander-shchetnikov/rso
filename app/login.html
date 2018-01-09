@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/libs.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <title>Авторизация</title>
   </head>
@@ -41,15 +42,15 @@
                         <div class="form__body">
                           <div class="form__container">
                             <div class="form__input-wrap">
-                              <label class="label form__input-label">Электронная почта</label>
+                              <label class="label form__input-label" for="undefined">Электронная почта</label>
                               <div class="form__input">
-                                <input class="input input--type_email" type="email" required>
+                                <input class=".input--type_email input" required="required" id="undefined" type="email" name="undefined" placeholder=" "/>
                               </div>
                             </div>
                             <div class="form__input-wrap">
-                              <label class="label form__input-label">Пароль</label>
+                              <label class="label form__input-label" for="undefined">Пароль</label>
                               <div class="form__input">
-                                <input class="input input--type_password" type="password" required>
+                                <input class=".input--type_password input" required="required" id="undefined" type="password" name="undefined" placeholder=" "/>
                               </div>
                             </div>
                           </div>
@@ -68,5 +69,6 @@
         </div>
       </div>
     </div>
+    <script defer src="js/script.js"></script>
   </body>
 </html>

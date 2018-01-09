@@ -1,3 +1,5 @@
+include ../components/forms
+
 doctype html
 
 block variables
@@ -10,6 +12,7 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="css/main.css")
+        script(defer,src="js/libs.min.js")
         script(defer,src="https://use.fontawesome.com/releases/v5.0.2/js/all.js")
         title= title
     body
@@ -32,4 +35,5 @@ html(lang="ru")
             .wrapper__body
                 .content.body
                     block content
+        script(defer,src="js/script.js")
 

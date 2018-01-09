@@ -1,0 +1,37 @@
+extends layouts/test
+
+block content
+    .content__container
+        .content__main
+            .content__row
+                .container__body
+                    .test.blocks
+                        .test__container.blocks__wrap
+                            .test-frame.test-frame__question.frame.frame--style_shadow
+                                p.frame__header.frame__header--small Вопрос №7
+                                .test-frame__question-body.frame__body
+                                    p.p Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?
+                        .test__container.blocks__wrap
+                            .test-frame.test-frame__answers.frame.frame--style_shadow
+                                h3.frame__header Ваш ответ :
+                                .frame__body
+                                    .test-frame__answers-body
+                                        .answer
+                                            input(type="radio",name="answer[]",value="1",id="a1").input.input--hidden
+                                            label(for="a1").answer__label
+                                                p.p.answer__p net share MyCommonName=D:\USERS\MyFolder
+                                        .answer
+                                            input(type="radio",name="answer[]",value="2",id="a2").input.input--hidden
+                                            label(for="a2").answer__label
+                                                p.p.answer__p net use MyCommonName=D:\USERS\MyFolder
+                                        .answer
+                                            input(type="radio",name="answer[]",value="4",id="a3").input.input--hidden
+                                            label(for="a3").answer__label
+                                                p.p.answer__p net config MyCommonName=D:\USERS\MyFolder
+                                        .answer
+                                            input(type="radio",name="answer[]",value="4",id="a4").input.input--hidden
+                                            label(for="a4").answer__label
+                                                p.p.answer__p net name MyCommonName disk=D:\USERS\MyFolder
+                                    .frame__block.confirm__control-panel
+                                        a(href="./test.html").button.button--king-blue Ответить
+                                        a(href="./index_login.html").button.button--king-blue-2 Пропустить

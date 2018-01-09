@@ -1,7 +1,12 @@
 extends layouts/auth
 
 block variables
-    - var title = "Авторизация"
+    -
+        var title = "Авторизация"
+        var loginFormList = [
+                {label:"Электронная почта", type:"email"},
+                {label:"Пароль", type:"password"},
+            ]
 
 block content
     .content__container
@@ -14,14 +19,7 @@ block content
                             form.auth__form.form
                                 .form__body
                                     .form__container
-                                            .form__input-wrap
-                                                label.label.form__input-label Электронная почта
-                                                .form__input
-                                                    input(type="email",required).input.input--type_email
-                                            .form__input-wrap
-                                                label.label.form__input-label Пароль
-                                                .form__input
-                                                    input(type="password",required).input.input--type_password
+                                            +formList(loginFormList)
                                     .form__container
                                         .form__input-wrap.form__input-wrap--style_h
                                             a(href="./index_login.html").button.button--king-blue Войти

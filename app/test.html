@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/libs.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="content">
+          <div class="content__container">
+            <div class="content__row">
+              <div class="header content__main">
+                <div class="logo">
+                  <div class="logo__container">
+                    <div class="logo__img-container"><img class="logo__img" src="img/vso_v.png"></div>
+                    <div class="logo__text-container">
+                      <h3 class="logo__h3">Тестирование</h3>
+                      <h2 class="logo__h2">
+                        Администрирование компьютерных
+                        систем
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__body">
+        <div class="content body">
+          <div class="content__container">
+            <div class="content__main">
+              <div class="content__row">
+                <div class="container__body">
+                  <div class="test blocks">
+                    <div class="test__container blocks__wrap">
+                      <div class="test-frame test-frame__question frame frame--style_shadow">
+                        <p class="frame__header frame__header--small">Вопрос №7</p>
+                        <div class="test-frame__question-body frame__body">
+                          <p class="p">Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="test__container blocks__wrap">
+                      <div class="test-frame test-frame__answers frame frame--style_shadow">
+                        <h3 class="frame__header">Ваш ответ :</h3>
+                        <div class="frame__body">
+                          <div class="test-frame__answers-body">
+                            <div class="answer">
+                              <input class="input input--hidden" type="radio" name="answer[]" value="1" id="a1">
+                              <label class="answer__label" for="a1">
+                                <p class="p answer__p">net share MyCommonName=D:\USERS\MyFolder</p>
+                              </label>
+                            </div>
+                            <div class="answer">
+                              <input class="input input--hidden" type="radio" name="answer[]" value="2" id="a2">
+                              <label class="answer__label" for="a2">
+                                <p class="p answer__p">net use MyCommonName=D:\USERS\MyFolder</p>
+                              </label>
+                            </div>
+                            <div class="answer">
+                              <input class="input input--hidden" type="radio" name="answer[]" value="4" id="a3">
+                              <label class="answer__label" for="a3">
+                                <p class="p answer__p">net config MyCommonName=D:\USERS\MyFolder</p>
+                              </label>
+                            </div>
+                            <div class="answer">
+                              <input class="input input--hidden" type="radio" name="answer[]" value="4" id="a4">
+                              <label class="answer__label" for="a4">
+                                <p class="p answer__p">net name MyCommonName disk=D:\USERS\MyFolder</p>
+                              </label>
+                            </div>
+                          </div>
+                          <div class="frame__block confirm__control-panel"><a class="button button--king-blue" href="./test.html">Ответить</a><a class="button button--king-blue-2" href="./index_login.html">Пропустить</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="js/script.js"></script>
+  </body>
+</html>

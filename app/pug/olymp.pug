@@ -2,7 +2,7 @@ extends layouts/main
 
 block variables
     - var login = true
-    - var participant = false
+    - var participant = true
     - var tested = false
     - var title = "Конкурс научно-исследовательских работ “Физика перспективных материалов”"
 block content
@@ -40,7 +40,7 @@ block content
                                             if !participant
                                                 button(disabled="disabled").button.button--white-blue.olymp-data-frame__button.button--disabled Начать тестирование
                                             else
-                                                button.button.button--white-blue.olymp-data-frame__button Начать тестирование
+                                                a(href="./test_start.html").button.button--white-blue.olymp-data-frame__button Начать тестирование
                                         else
                                             p.olymp-data-frame__p.olymp-data-frame__p--white 15 правильных ответов из 30
                                             p.olymp-data-frame__p.olymp-data-frame__p--white.olymp-data-frame__p--bold 50%
