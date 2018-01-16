@@ -47,7 +47,8 @@ gulp.task('css-libs', ['sass'], function() {
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/libs/jquery/dist/jquery.min.js' // Берем jQuery
+        'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
+        'app/libs/jquery-maskedinput/dist/jquery.maskedinput.min.js' // Берем jQuery Masked Input
         //'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js

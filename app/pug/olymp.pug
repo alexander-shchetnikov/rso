@@ -3,7 +3,7 @@ extends layouts/main
 block variables
     - var login = true
     - var participant = true
-    - var tested = false
+    - var tested = true
     - var title = "Конкурс научно-исследовательских работ “Физика перспективных материалов”"
 block content
     .content__container.content__main--bg-img
@@ -31,9 +31,6 @@ block content
                                     h2.frame__header.olymp-data-frame__header.olymp-data-frame__header--white
                                         i.fas.fa-star.olymp-data-frame__header-icon.olymp-data-frame__header-icon--gold
                                         | Ваш результат:
-                                        if tested
-                                            i.olymp-data-frame__rating-number= " 7 "
-                                            | место
                                     .frame__body.olymp-data-frame__body
                                         if !tested
                                             p.olymp-data-frame__p.olymp-data-frame__p--white Вы еще не прошли тестирование
@@ -42,8 +39,9 @@ block content
                                             else
                                                 a(href="./test_start.html").button.button--white-blue.olymp-data-frame__button Начать тестирование
                                         else
-                                            p.olymp-data-frame__p.olymp-data-frame__p--white 15 правильных ответов из 30
-                                            p.olymp-data-frame__p.olymp-data-frame__p--white.olymp-data-frame__p--bold 50%
+                                            p.olymp-data-frame__p.olymp-data-frame__p--white
+                                                span.olymp-data-frame__p--bold.olymp-data-frame__p--gold= "30 "
+                                                | Баллов
                             .olymps__wrap
                                 .frame.frame--style_shadow.olymp-data-frame
                                     h2.frame__header.olymp-data-frame__header

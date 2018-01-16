@@ -4,9 +4,10 @@ block variables
     -
         var title = "Авторизация"
         var loginFormList = [
-                {label:"Электронная почта", type:"email"},
-                {label:"Пароль", type:"password"},
+                {label:"Электронная почта", type:"email",name:"user['email']",id:"fEmail"},
+                {label:"Пароль", type:"password",name:"user['password']",id:"fPassword"}
             ]
+        var loginError = true
 
 block content
     .content__container
@@ -19,7 +20,11 @@ block content
                             form.auth__form.form
                                 .form__body
                                     .form__container
+                                        .form__col
                                             +formList(loginFormList)
+                                            if loginError
+                                                .notify.notify--error
+                                                    p.notify__message Неправильный логин или пароль. Повторите еще раз
                                     .form__container
                                         .form__input-wrap.form__input-wrap--style_h
                                             a(href="./index_login.html").button.button--king-blue Войти

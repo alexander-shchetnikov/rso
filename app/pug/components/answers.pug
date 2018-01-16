@@ -1,0 +1,32 @@
+mixin renderAnswer(type_id)
+    case type_id
+        when 1
+            - var list = ['net share MyCommonName=D:\USERS\MyFolder','net use MyCommonName=D:\USERS\MyFolder','net config MyCommonName=D:\\USERS\\MyFolder','net name MyCommonName disk=D:\\USERS\\MyFolder']
+            - var i = 1
+            each item in list
+                .answer
+                    input(type="radio", name="answer[]", value="" + i, id="a" + i).input.input--hidden
+                    label(for="a" + i).answer__label
+                        p.p.answer__p= list[i-1]
+                    - i++
+        when 2
+            - var list = ['net share MyCommonName=D:\USERS\MyFolder','net use MyCommonName=D:\USERS\MyFolder','net config MyCommonName=D:\\USERS\\MyFolder','net name MyCommonName disk=D:\\USERS\\MyFolder']
+            - var i = 1
+            each item in list
+                .answer
+                    input(type="checkbox", name="answer[]", value="" + i, id="a" + i).input.input--hidden
+                    label(for="a" + i).answer__label
+                        p.p.answer__p= list[i - 1]
+                    - i++
+        when 3
+            .answer.answer--border-none
+                input(type="text",name="answer[]",value="").input.answer__input.answer__input--text
+        when 4
+            - var list = ['net share MyCommonName=D:\USERS\MyFolder','net use MyCommonName=D:\USERS\MyFolder','net config MyCommonName=D:\\USERS\\MyFolder','net name MyCommonName disk=D:\\USERS\\MyFolder']
+            - var i = 1
+            each item in list
+                .answer.answer--hover-none
+                    input(type="number", name="answer[]", value="" + i, id="a" + i,max=""+list.length,min="1").input.answer__input--number
+                    label(for="a" + i).answer__label
+                        p.p.answer__p= list[i - 1]
+                    - i++
