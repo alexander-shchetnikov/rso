@@ -1,0 +1,40 @@
+extends layouts/auth
+
+block variables
+    -
+        var title = "Авторизация"
+        var loginFormList = [
+        {label:"Электронная почта", type:"email",name:"user['email']",id:"fEmail"}
+        ]
+        var reset = true
+
+block content
+    .content__container
+        .content__main.content__main--ta_center
+            .content__row.content__row--display_i-b
+                .container__body
+                    .auth.frame.frame--style_shadow
+                        h2.auth__header.frame__header Восстановление пароля
+                        .frame__body
+                            form.auth__form.form
+                                .form__body
+                                    .form__container
+                                        .form__col
+                                            if reset
+                                                .notify.notify--successful
+                                                    p.notify__message Новый пароль выслан вам на почтовый адрес
+                                            else
+                                                +formList(loginFormList)
+
+                                    if !reset
+                                        .form__container
+                                            .form__input-wrap.form__input-wrap--style_h
+                                                button(name='reset',value='true').button.button--king-blue Восстановить
+                                .form__footer
+                                    a(href="./index.html").form__link.form__home-link.link
+                                        i.fas.fa-home.link__icon
+                                        | Вернуться на главную
+
+
+
+

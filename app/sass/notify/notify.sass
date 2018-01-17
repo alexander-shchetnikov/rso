@@ -11,10 +11,27 @@
     background: transparentize($red,0.90)
     border: 1px solid transparentize($red,0.8)
     &:before
-      content: '\f071'
+      content: '\f06a'
+      background: #FFF
+      border-radius: 50%
       display: inline-block
       font-family: "Font Awesome 5 Free Solid"
       position: absolute
       top: -8px
       left: -8px
       text-shadow: 0px 0px 20px transparentize($red,0.5)
+  &--successful
+    color: darken($green,30%)
+    background: transparentize($green,0.90)
+    border: 1px solid transparentize($green,0.5)
+    &:before
+      content: '\f058'
+      background: #FFF
+      border-radius: 50%
+      display: inline-block
+      font-family: "Font Awesome 5 Free Solid"
+      color: $green
+      position: absolute
+      top: -8px
+      left: -8px
+      text-shadow: 0px 0px 20px transparentize($green,0.5)
