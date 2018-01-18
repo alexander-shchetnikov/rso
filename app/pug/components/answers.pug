@@ -30,3 +30,12 @@ mixin renderAnswer(type_id)
                     label(for="a" + i).answer__label
                         p.p.answer__p= list[i - 1]
                     - i++
+        when 5
+            - var list = ['Mitsubishi Lancer X','Mercedes-Benz S500','Audi A7','BMW 520']
+            - var i = 1
+            each item in list
+                .answer-assoc.answer--hover-none
+                    input(type="number", name="answer[]", placeholder="№", id="a" + i,max="" + list.length,min="1").input.answer__input--number
+                    //img(src="img/car1.png").answer__img
+                    p.p.answer__p= list[i - 1]
+                    - i++

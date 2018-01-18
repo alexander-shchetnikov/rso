@@ -3,12 +3,12 @@ include components/answers
 block variables
     -
         var title = "Тестирование"
-        var q_type_id = 1
+        var q_type_id = 5
         //1 radio
         //2 checkbox
         //3 string
         //4 position
-        //5
+        //5 refer
 block content
     .content__container
         .content__main
@@ -24,13 +24,25 @@ block content
                                     .test__progress-bar
                                         .test__current-progress
                                     .test-frame__question-body.frame__body
-                                        p.p Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?
+                                        if q_type_id == 5
+                                            p.p Вопрос сопоставление
+                                            - var list = ['car1.png','car2.jpg','car3.jpg','car4.png']
+                                            - var i = 1
+                                            .test-frame__q-assoc-body
+                                                each item in list
+                                                    .answer-assoc.answer--hover-none
+                                                        span.answer-assoc__number= i
+                                                        img(src="img/" + list[i - 1]).answer__img
+                                                        //p.p.answer__p= list[i - 1]
+                                                        - i++
+                                        else
+                                            p.p Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?
                             .test__container
                                 .test-frame.test-frame__answers.frame.frame--style_border
                                     h3.frame__header
                                         i.fas.fa-clock.olymp-data-frame__header-icon
                                         | Осталось:
-                                        span(data-min=0,data-sec=5).test__time#time= " 10:05"
+                                        span(data-min=15,data-sec=00).test__time#time= " 15:00"
                                     .frame__body
                                         button.button.button--red Завершить
                         .blocks__wrap
