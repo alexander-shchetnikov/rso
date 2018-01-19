@@ -1,0 +1,16 @@
+extends layouts/test
+
+block content
+    .content__container
+        .content__main.content__main--ta_center
+            .content__row.content__row--display_i-b
+                .container__body
+                    .confirm.frame.frame--style_shadow
+                        h2.frame__header
+                            span.frame__header--light= 'Тестирование по '
+                            | Администрирование компьютерных систем
+                        .frame__body
+                            .notify.notify--error
+                                p.notify__message Тестирование было завершено в связи с истечением времени
+                            .frame__block.confirm__control-panel
+                                a(href="./test.html").button.button--king-blue ОК
