@@ -36,3 +36,9 @@ if($("#time")){
         clearInterval(timer)
     }
 }
+$(document).ready( function() {
+    $(".input--type_file").change(function(){
+        var filename = $(this).val().replace(/.*\\/, "");
+        $(this).parent().find('.label__filename').html(filename);
+    });
+});

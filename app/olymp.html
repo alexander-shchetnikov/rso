@@ -68,7 +68,22 @@
                         <div class="frame frame--style_shadow olymp-data-frame olymp-data-frame--multicolor">
                           <h2 class="frame__header olymp-data-frame__header olymp-data-frame__header--white"><i class="fas fa-star olymp-data-frame__header-icon olymp-data-frame__header-icon--gold"></i>Ваш результат:</h2>
                           <div class="frame__body olymp-data-frame__body">
-                            <p class="olymp-data-frame__p olymp-data-frame__p--white"><span class="olymp-data-frame__p--bold olymp-data-frame__p--gold">30 </span>Баллов</p>
+                            <p class="olymp-data-frame__p olymp-data-frame__p--white">Вы еще не отправили научную работу</p>
+                            <form class="olymp-data-frame__form">
+                              <div class="form__input-wrap form__input-wrap--style_h form__input-wrap--file">
+                                <label class="olymp-data-frame__label label__file" for="fApplication">Загрузить заявку</label>
+                                <input class="input--type_file" type="file" id="fApplication" required><span class="label__filename">Выберите файл</span>
+                              </div>
+                              <div class="form__input-wrap form__input-wrap--style_h form__input-wrap--file">
+                                <label class="olymp-data-frame__label label__file" for="fWork">Загрузить научную работу</label>
+                                <input class="input--type_file" type="file" id="fWork" required><span class="label__filename">Выберите файл</span>
+                              </div>
+                              <button class="button button--king-blue-2">Отправить</button>
+                            </form>
+                            <div class="notify notify--error notify--background notify--mt_20">
+                              <p class="notify__message">Файл C3850-ROOT--Dec-28-01-56-46-6 имеет недопустимое расширение</p>
+                              <p class="notify__message">Файл asd.txt имеет недопустимое расширение</p>
+                            </div>
                           </div>
                         </div>
                       </div>

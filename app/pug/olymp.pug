@@ -5,6 +5,7 @@ block variables
     - var participant = true
     - var tested = true
     - var title = "Конкурс научно-исследовательских работ “Физика перспективных материалов”"
+    - var type_id = 2
 block content
     .content__container.content__main--bg-img
         .content__main.content__main--bc_black
@@ -32,16 +33,32 @@ block content
                                         i.fas.fa-star.olymp-data-frame__header-icon.olymp-data-frame__header-icon--gold
                                         | Ваш результат:
                                     .frame__body.olymp-data-frame__body
-                                        if !tested
-                                            p.olymp-data-frame__p.olymp-data-frame__p--white Вы еще не прошли тестирование
-                                            if !participant
-                                                button(disabled="disabled").button.button--white-blue.olymp-data-frame__button.button--disabled Начать тестирование
+                                        if type_id == 1
+                                            if !tested
+                                                p.olymp-data-frame__p.olymp-data-frame__p--white Вы еще не прошли тестирование
+                                                if !participant
+                                                    button(disabled="disabled").button.button--white-blue.olymp-data-frame__button.button--disabled Начать тестирование
+                                                else
+                                                    a(href="./test_start.html").button.button--white-blue.olymp-data-frame__button Начать тестирование
                                             else
-                                                a(href="./test_start.html").button.button--white-blue.olymp-data-frame__button Начать тестирование
-                                        else
-                                            p.olymp-data-frame__p.olymp-data-frame__p--white
-                                                span.olymp-data-frame__p--bold.olymp-data-frame__p--gold= "30 "
-                                                | Баллов
+                                                p.olymp-data-frame__p.olymp-data-frame__p--white
+                                                    span.olymp-data-frame__p--bold.olymp-data-frame__p--gold= "30 "
+                                                    | Баллов
+                                        else if type_id == 2
+                                            p.olymp-data-frame__p.olymp-data-frame__p--white Вы еще не отправили научную работу
+                                            form.olymp-data-frame__form
+                                                .form__input-wrap.form__input-wrap--style_h.form__input-wrap--file
+                                                    label(for="fApplication").olymp-data-frame__label.label__file Загрузить заявку
+                                                    input(type="file",id="fApplication",required).input--type_file
+                                                    span.label__filename Выберите файл
+                                                .form__input-wrap.form__input-wrap--style_h.form__input-wrap--file
+                                                    label(for="fWork").olymp-data-frame__label.label__file Загрузить научную работу
+                                                    input(type="file",id="fWork",required).input--type_file
+                                                    span.label__filename Выберите файл
+                                                button.button.button--king-blue-2 Отправить
+                                            .notify.notify--error.notify--background.notify--mt_20
+                                                p.notify__message Файл C3850-ROOT--Dec-28-01-56-46-6 имеет недопустимое расширение
+                                                p.notify__message Файл asd.txt имеет недопустимое расширение
                             .olymps__wrap
                                 .frame.frame--style_shadow.olymp-data-frame
                                     h2.frame__header.olymp-data-frame__header
