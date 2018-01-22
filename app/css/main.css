@@ -18,6 +18,9 @@ html, body {
 h1, h2, h3, h4 {
   font-family: "Museo Sans Cyrl"; }
 
+.hidden {
+  display: none; }
+
 .wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -279,8 +282,8 @@ h1, h2, h3, h4 {
   border: 1px solid #DDD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  min-width: 240px;
-  width: 100%;
+  width: 100%s;
+  max-width: 240px;
   padding: 8px 15px;
   -webkit-transition: 0.230s;
   -o-transition: 0.230s;
@@ -857,6 +860,18 @@ h1, h2, h3, h4 {
   font-family: inherit;
   font-weight: inherit; }
 
+.test__popup-block {
+  width: 320px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
 .test-frame__question-body {
   margin-top: 10px; }
 
@@ -1011,6 +1026,19 @@ h1, h2, h3, h4 {
   .p--small {
     font-size: 12px;
     color: #5C5C5C; }
+
+.popup {
+  max-width: 80%;
+  max-height: 80%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px;
+  margin: auto;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #FFF; }
 
 .g-recaptcha {
   -webkit-transform: scale(0.79);

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/libs.css">
     <script defer src="js/libs.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
     <title>Тестирование</title>
@@ -50,15 +51,41 @@
                             <div class="test__current-progress"></div>
                           </div>
                           <div class="test-frame__question-body frame__body">
-                            <p class="p">Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?</p>
+                            <p class="p">Вопрос сопоставление</p>
+                            <div class="test-frame__q-assoc-body">
+                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">1</span><a class="image-popup" href="img/car1.png"><img class="answer__img" src="img/car1.png"></a>
+                                <!--p.p.answer__p= list[i - 1]-->
+                              </div>
+                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">2</span><a class="image-popup" href="img/car2.jpg"><img class="answer__img" src="img/car2.jpg"></a>
+                                <!--p.p.answer__p= list[i - 1]-->
+                              </div>
+                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">3</span><a class="image-popup" href="img/car3.jpg"><img class="answer__img" src="img/car3.jpg"></a>
+                                <!--p.p.answer__p= list[i - 1]-->
+                              </div>
+                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">4</span><a class="image-popup" href="img/car4.png"><img class="answer__img" src="img/car4.png"></a>
+                                <!--p.p.answer__p= list[i - 1]-->
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="test__container">
                         <div class="test-frame test-frame__answers frame frame--style_border">
                           <h3 class="frame__header"><i class="fas fa-clock olymp-data-frame__header-icon"></i>Осталось:<span class="test__time" data-min="15" data-sec="0" id="time"> 15:00</span></h3>
-                          <div class="frame__body">
-                            <button class="button button--red">Завершить</button>
+                          <div class="frame__body"><a class="button button--red testComplete" href="#form">Завершить</a>
+                            <div class="hidden">
+                              <div class="popup test__popup-block frame" id="form">
+                                <h2 class="frame__header">Подтвердите действие</h2>
+                                <div class="frame__body">
+                                  <div class="notify notify--error">
+                                    <p class="notify__message">Вы действительно хотите завершить тестирование?</p>
+                                  </div>
+                                  <form class="frame__block confirm__control-panel" method="POST">
+                                    <button class="button button--red" name="complete" value>Да</button><a class="button button--grey" onclick="closePopup()">Нет</a>
+                                  </form>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -69,11 +96,28 @@
                           <h3 class="frame__header">Ваш ответ :</h3>
                           <div class="frame__body">
                             <div class="test-frame__answers-body">
-                              <div class="answer answer--border-none">
-                                <input class="input answer__input answer__input--text" type="text" name="answer[]" value=""/>
+                              <div class="answer-assoc answer--hover-none">
+                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a1" max="4" min="1"/>
+                                <!--img(src="img/car1.png").answer__img-->
+                                <p class="p answer__p">Mitsubishi Lancer X</p>
+                              </div>
+                              <div class="answer-assoc answer--hover-none">
+                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a2" max="4" min="1"/>
+                                <!--img(src="img/car1.png").answer__img-->
+                                <p class="p answer__p">Mercedes-Benz S500</p>
+                              </div>
+                              <div class="answer-assoc answer--hover-none">
+                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a3" max="4" min="1"/>
+                                <!--img(src="img/car1.png").answer__img-->
+                                <p class="p answer__p">Audi A7</p>
+                              </div>
+                              <div class="answer-assoc answer--hover-none">
+                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a4" max="4" min="1"/>
+                                <!--img(src="img/car1.png").answer__img-->
+                                <p class="p answer__p">BMW 520</p>
                               </div>
                             </div>
-                            <div class="frame__block confirm__control-panel"><a class="button button--king-blue" href="./test.html">Ответить</a><a class="button button--grey" href="./index_login.html">Пропустить</a></div>
+                            <div class="frame__block confirm__control-panel"><a class="button button--king-blue" href="./test.html">Ответить</a><a class="button button--grey" href="./test.html">Пропустить</a></div>
                           </div>
                         </div>
                       </div>

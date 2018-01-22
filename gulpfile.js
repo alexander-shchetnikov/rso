@@ -25,7 +25,10 @@ gulp.task('pug',function () {
 });
 
 gulp.task('sass',function(){
-    return gulp.src('app/sass/main.sass')
+    return gulp.src([
+        'app/sass/main.sass',
+        'app/sass/libs.sass'
+    ])
         .pipe(sass())
         .pipe(autoprefixer(
             ['last 15 version','> 1%','ie 8','ie 7'],
@@ -48,8 +51,8 @@ gulp.task('css-libs', ['sass'], function() {
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        'app/libs/jquery-maskedinput/dist/jquery.maskedinput.min.js' // Берем jQuery Masked Input
-        //'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+        'app/libs/jquery-maskedinput/dist/jquery.maskedinput.min.js', // Берем jQuery Masked Input
+        'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
@@ -84,7 +87,8 @@ gulp.task('clear', function () {
 
 gulp.task('build',['clean','pug','css-libs','scripts'],function(){
     var build_css = gulp.src([
-        'app/css/main.css'
+        'app/css/main.css',
+        'app/css/libs.css'
     ])
         .pipe(gulp.dest('dist/css'));
 

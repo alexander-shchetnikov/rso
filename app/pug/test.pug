@@ -3,7 +3,7 @@ include components/answers
 block variables
     -
         var title = "Тестирование"
-        var q_type_id = 3
+        var q_type_id = 5
         //1 radio
         //2 checkbox
         //3 string
@@ -32,7 +32,8 @@ block content
                                                 each item in list
                                                     .answer-assoc.answer--hover-none
                                                         span.answer-assoc__number= i
-                                                        img(src="img/" + list[i - 1]).answer__img
+                                                        a(href="img/" + list[i - 1]).image-popup
+                                                            img(src="img/" + list[i - 1]).answer__img
                                                         //p.p.answer__p= list[i - 1]
                                                         - i++
                                         else
@@ -44,7 +45,16 @@ block content
                                         | Осталось:
                                         span(data-min=15,data-sec=00).test__time#time= " 15:00"
                                     .frame__body
-                                        button.button.button--red Завершить
+                                        a(href="#form").button.button--red.testComplete Завершить
+                                        .hidden
+                                            #form.popup.test__popup-block.frame
+                                                h2.frame__header Подтвердите действие
+                                                .frame__body
+                                                    .notify.notify--error
+                                                        p.notify__message Вы действительно хотите завершить тестирование?
+                                                    form(method='POST').frame__block.confirm__control-panel
+                                                        button(name="complete",value=true).button.button--red Да
+                                                        a(onclick="closePopup()").button.button--grey Нет
                         .blocks__wrap
                             .test__container
                                 .test-frame.test-frame__answers.frame.frame--style_shadow
@@ -54,4 +64,4 @@ block content
                                             +renderAnswer(q_type_id)
                                         .frame__block.confirm__control-panel
                                             a(href="./test.html").button.button--king-blue Ответить
-                                            a(href="./index_login.html").button.button--grey Пропустить
+                                            a(href="./test.html").button.button--grey Пропустить

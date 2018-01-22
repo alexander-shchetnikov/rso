@@ -35,10 +35,35 @@ if($("#time")){
     function stopTimer() {
         clearInterval(timer)
     }
-}
+};
 $(document).ready( function() {
     $(".input--type_file").change(function(){
         var filename = $(this).val().replace(/.*\\/, "");
         $(this).parent().find('.label__filename').html(filename);
+    });
+});
+jQuery(document).ready(function($) {
+    $('.testComplete').magnificPopup({
+        type: 'inline'
+    });
+});
+function closePopup() {
+    $.magnificPopup.close();
+};
+$(document).ready(function() {
+
+    $('.image-popup').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+        image: {
+            verticalFit: true
+        },
+        zoom: {
+            enabled: true,
+            duration: 300 // don't foget to change the duration also in CSS
+        }
     });
 });
