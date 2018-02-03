@@ -27,7 +27,8 @@ gulp.task('pug',function () {
 gulp.task('sass',function(){
     return gulp.src([
         'app/sass/main.sass',
-        'app/sass/libs.sass'
+        'app/sass/libs.sass',
+        'app/sass/admin.sass'
     ])
         .pipe(sass())
         .pipe(autoprefixer(
@@ -88,6 +89,7 @@ gulp.task('clear', function () {
 gulp.task('build',['clean','pug','css-libs','scripts'],function(){
     var build_css = gulp.src([
         'app/css/main.css',
+        'app/css/admin.css',
         'app/css/libs.css'
     ])
         .pipe(gulp.dest('dist/css'));

@@ -1,0 +1,47 @@
+.admin-frame__header {
+  font-family: "Museo Sans Cyrl";
+  font-weight: bold;
+  color: #5C5C5C; }
+  .admin-frame__header:hover {
+    color: #5C5C5C; }
+
+.admin-frame__body {
+  margin: 0px; }
+
+.admin-frame__list {
+  margin: 20px 0px -10px;
+  width: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.admin-frame__list-element {
+  margin-bottom: 10px; }
+
+.admin-frame__list-link {
+  font-size: 12px;
+  color: #5C5C5C; }
+  .admin-frame__list-link:hover {
+    color: #5C5C5C; }
+
+.admin-frame__question-content {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 30px; }
+
+.admin-frame__answer {
+  margin-bottom: 40px; }
+
+.admin-frame__answer-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px; }
+
+.admin-frame__answer-name {
+  margin-right: 30px; }

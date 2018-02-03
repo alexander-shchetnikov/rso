@@ -1,0 +1,40 @@
+extends layouts/admin
+include components/answers
+block variables
+    -
+        var title = "Панель управления"
+
+block content
+    .content__container
+        .content__main
+            .content__row
+                .container__header
+                    h2.container__h2 Панель управления
+                .container__body
+                    .blocks
+                        .blocks__wrap.admin-frame
+                            .documents__elem.frame.frame--style_border
+                                i.far.fa-user.frame__icon
+                                .frame__body.admin-frame__body
+                                    a(href='./admin_users.html').frame__header.admin-frame__header Пользователи
+                                    ul.list.list--type_h.admin-frame__list
+                                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                                            a.admin-frame__list-link(href="#") Управление пользователями
+                        .blocks__wrap.admin-frame
+                            .documents__elem.frame.frame--style_border
+                                i.far.fa-list-alt.frame__icon
+                                .frame__body.admin-frame__body
+                                    a(href='./admin_tests.html').frame__header.admin-frame__header Тестирование
+                                    ul.list.list--type_h.admin-frame__list
+                                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                                            a.admin-frame__list-link(href="./admin/olymp-q/1") Просмотр результатов
+                                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                                            a.admin-frame__list-link(href="./admin_questions.html") Управление вопросами
+                        .blocks__wrap.admin-frame
+                            .documents__elem.frame.frame--style_border
+                                i.far.fa-file-alt.frame__icon
+                                .frame__body.admin-frame__body
+                                    a(href='./admin_sworks.html').frame__header.admin-frame__header Научные работы
+                                    ul.list.list--type_h.admin-frame__list
+                                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                                            a.admin-frame__list-link(href="#") Просмотр научных работ

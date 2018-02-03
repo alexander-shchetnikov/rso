@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <script defer src="js/libs.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <title>Панель управления</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="content">
+          <div class="content__container">
+            <div class="content__row">
+              <div class="header content__main">
+                <div class="logo">
+                  <div class="logo__container">
+                    <div class="logo__img-container"><img class="logo__img" src="img/vso_v.png"></div>
+                    <div class="logo__text-container">
+                      <h3 class="logo__h2">Панель управления</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-menu frame frame--style_shadow">
+                  <div class="main-menu__container">
+                    <ul class="main-menu__main-list list list--type_h">
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h"><a class="main-menu__link list__link" href="./index.html"><i class="fas fa-home"></i></a></li>
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h"><a class="main-menu__link list__link" href="./admin_users.html">Пользователи</a></li>
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h"><a class="main-menu__link list__link" href="./admin_tests.html">Тестирование</a></li>
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h"><a class="main-menu__link list__link" href="./admin_sworks.html">Научные работы</a></li>
+                    </ul>
+                    <ul class="main-menu__user-control list list--type_h">
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h">
+                        <p class="main-menu__username">Александр Щетников</p>
+                      </li>
+                      <li class="main-menu__list-element list__list-element list__list-element--type_h"><a class="main-menu__link list__link" href="./index.html">Выйти</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__body">
+        <div class="content body">
+          <div class="content__container">
+            <div class="content__main">
+              <div class="content__row">
+                <div class="container__header">
+                  <h2 class="container__h2">Панель управления</h2>
+                </div>
+                <div class="container__body">
+                  <div class="blocks">
+                    <div class="blocks__wrap admin-frame">
+                      <div class="documents__elem frame frame--style_border"><i class="far fa-user frame__icon"></i>
+                        <div class="frame__body admin-frame__body"><a class="frame__header admin-frame__header" href="./admin_users.html">Пользователи</a>
+                          <ul class="list list--type_h admin-frame__list">
+                            <li class="list__list-element list__list-element--type_h admin-frame__list-element"><a class="admin-frame__list-link" href="#">Управление пользователями</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blocks__wrap admin-frame">
+                      <div class="documents__elem frame frame--style_border"><i class="far fa-list-alt frame__icon"></i>
+                        <div class="frame__body admin-frame__body"><a class="frame__header admin-frame__header" href="./admin_tests.html">Тестирование</a>
+                          <ul class="list list--type_h admin-frame__list">
+                            <li class="list__list-element list__list-element--type_h admin-frame__list-element"><a class="admin-frame__list-link" href="./admin/olymp-q/1">Просмотр результатов</a></li>
+                            <li class="list__list-element list__list-element--type_h admin-frame__list-element"><a class="admin-frame__list-link" href="./admin_questions.html">Управление вопросами</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="blocks__wrap admin-frame">
+                      <div class="documents__elem frame frame--style_border"><i class="far fa-file-alt frame__icon"></i>
+                        <div class="frame__body admin-frame__body"><a class="frame__header admin-frame__header" href="./admin_sworks.html">Научные работы</a>
+                          <ul class="list list--type_h admin-frame__list">
+                            <li class="list__list-element list__list-element--type_h admin-frame__list-element"><a class="admin-frame__list-link" href="#">Просмотр научных работ</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer src="js/script.js"></script>
+    <script defer src="js/admin.js"></script>
+  </body>
+</html>

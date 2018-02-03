@@ -1,0 +1,76 @@
+extends layouts/admin
+include components/answers
+block variables
+    -
+        var title = "Тестирование"
+        var q_type_id = 5
+        var type
+        if(q_type_id == 1) type = "radio"
+        else if(q_type_id == 2) type = "checkbox"
+        else if(q_type_id == 3) type = "text"
+        else if(q_type_id == 5) type = "number"
+block content
+    .content__container
+        .content__main
+            .content__row
+                .container__header
+                    h2.container__h2 Добавить вопрос
+                .container__body
+                    form(method='POST',style="margin-bottom:50px")
+                        select(name="").input
+                            option Выберите олимпиаду
+                            option История
+                            option Администрирование компьютерных систем
+                            option Физика
+                        select(name="").input#q_type
+                            option Выберите тип вопроса
+                            option(value="qType1") С одним вариантом ответа
+                            option(value="qType2") С несколькими вариантами ответов
+                            option(value="qType3") Ответ в видет строки
+                            option(value="qType5") Ответ сопоставление
+                        hr(style="margin: 30px 0px").hr
+                        .admin-frame__question
+                            .blocks
+                                .blocks__wrap
+                                    .admin-frame__question-content
+                                        .form__input-wrap
+                                            label.label.form__input-label Текст вопроса
+                                            .form__input
+                                                textarea.input.textarea
+                                        .form__input-wrap
+                                            label(for="qImg").label.label__file Изображение
+                                            input#qImg.input--type_file(type="file")
+                                            span.label__filename.label__filename--grey Изображение не выбрано
+                                        if q_type_id == 3
+                                            .form__input-wrap
+                                                label(for="aString").label.admin-frame__answer-name= "Ответ"
+                                                input(id="aString",type="text",name="true_answer",).input
+                                        else if q_type_id == 5
+                                            - for ( var j = 1 ; j <= 4; j++ )
+                                                .admin-frame__answer
+                                                    .form__input-wrap.admin-frame__answer-header
+                                                        label.label.admin-frame__answer-name= "Ответ " + j
+                                                    .form__input-wrap
+                                                        .form__input
+                                                            textarea.input.textarea
+                                                    .form__input-wrap
+                                                        label(for="a" + i + "img").label.label__file Изображение
+                                                        input(id="a" + i + "img").input--type_file(type="file")
+                                                        span.label__filename.label__filename--grey Изображение не выбрано
+                                    .form__input-wrap
+                                        button.button.button--king-blue Добавить вопрос
+                                if q_type_id != 3
+                                    .blocks__wrap
+                                        - for ( var i = 1 ; i <= 4; i++ )
+                                            .admin-frame__answer
+                                                .form__input-wrap.admin-frame__answer-header
+                                                    label.label.admin-frame__answer-name= "Ответ " + i
+                                                    input(id="a" + i,type=""+type,name="true_answer",value=""+i).input--type_radio
+                                                    label(for="a" + i).label Правильный
+                                                .form__input-wrap
+                                                    .form__input
+                                                        textarea.input.textarea
+                                                .form__input-wrap
+                                                    label(for="a"+i+"img").label.label__file Изображение
+                                                    input(id="a"+i+"img").input--type_file(type="file")
+                                                    span.label__filename.label__filename--grey Изображение не выбрано

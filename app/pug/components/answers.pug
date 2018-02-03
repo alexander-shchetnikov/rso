@@ -7,7 +7,9 @@ mixin renderAnswer(type_id)
                 .answer
                     input(type="radio", name="answer[]", value="" + i, id="a" + i).input.input--hidden
                     label(for="a" + i).answer__label
-                        p.p.answer__p= list[i-1]
+                        //p.p.answer__p= list[i-1]
+                        a(href="img/car1.png").image-popup
+                            img(src="img/car1.png").answer__img
                     - i++
         when 2
             - var list = ['net share MyCommonName=D:\USERS\MyFolder','net use MyCommonName=D:\USERS\MyFolder','net config MyCommonName=D:\\USERS\\MyFolder','net name MyCommonName disk=D:\\USERS\\MyFolder']

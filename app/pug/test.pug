@@ -3,7 +3,7 @@ include components/answers
 block variables
     -
         var title = "Тестирование"
-        var q_type_id = 5
+        var q_type_id = 2
         //1 radio
         //2 checkbox
         //3 string
@@ -38,6 +38,11 @@ block content
                                                         - i++
                                         else
                                             p.p Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?
+                                            a(href="img/bg.jpg").image-popup
+                                                img(src="img/bg.jpg").answer__img
+                                    .frame__body
+                                        .notify.notify--grey
+                                            p.notify__message Вопрос в одним вариантом ответа
                             .test__container
                                 .test-frame.test-frame__answers.frame.frame--style_border
                                     h3.frame__header

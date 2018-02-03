@@ -51,20 +51,11 @@
                             <div class="test__current-progress"></div>
                           </div>
                           <div class="test-frame__question-body frame__body">
-                            <p class="p">Вопрос сопоставление</p>
-                            <div class="test-frame__q-assoc-body">
-                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">1</span><a class="image-popup" href="img/car1.png"><img class="answer__img" src="img/car1.png"></a>
-                                <!--p.p.answer__p= list[i - 1]-->
-                              </div>
-                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">2</span><a class="image-popup" href="img/car2.jpg"><img class="answer__img" src="img/car2.jpg"></a>
-                                <!--p.p.answer__p= list[i - 1]-->
-                              </div>
-                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">3</span><a class="image-popup" href="img/car3.jpg"><img class="answer__img" src="img/car3.jpg"></a>
-                                <!--p.p.answer__p= list[i - 1]-->
-                              </div>
-                              <div class="answer-assoc answer--hover-none"><span class="answer-assoc__number">4</span><a class="image-popup" href="img/car4.png"><img class="answer__img" src="img/car4.png"></a>
-                                <!--p.p.answer__p= list[i - 1]-->
-                              </div>
+                            <p class="p">Какая команда позволяет сделать общим сетевым ресурсом с именем MyCommonName локальную папку D:\USERS\MyFolder?</p><a class="image-popup" href="img/bg.jpg"><img class="answer__img" src="img/bg.jpg"></a>
+                          </div>
+                          <div class="frame__body">
+                            <div class="notify notify--grey">
+                              <p class="notify__message">Вопрос в одним вариантом ответа</p>
                             </div>
                           </div>
                         </div>
@@ -96,25 +87,29 @@
                           <h3 class="frame__header">Ваш ответ :</h3>
                           <div class="frame__body">
                             <div class="test-frame__answers-body">
-                              <div class="answer-assoc answer--hover-none">
-                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a1" max="4" min="1"/>
-                                <!--img(src="img/car1.png").answer__img-->
-                                <p class="p answer__p">Mitsubishi Lancer X</p>
+                              <div class="answer">
+                                <input class="input input--hidden" type="checkbox" name="answer[]" value="1" id="a1"/>
+                                <label class="answer__label" for="a1">
+                                  <p class="p answer__p">net share MyCommonName=D:USERSMyFolder</p>
+                                </label>
                               </div>
-                              <div class="answer-assoc answer--hover-none">
-                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a2" max="4" min="1"/>
-                                <!--img(src="img/car1.png").answer__img-->
-                                <p class="p answer__p">Mercedes-Benz S500</p>
+                              <div class="answer">
+                                <input class="input input--hidden" type="checkbox" name="answer[]" value="2" id="a2"/>
+                                <label class="answer__label" for="a2">
+                                  <p class="p answer__p">net use MyCommonName=D:USERSMyFolder</p>
+                                </label>
                               </div>
-                              <div class="answer-assoc answer--hover-none">
-                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a3" max="4" min="1"/>
-                                <!--img(src="img/car1.png").answer__img-->
-                                <p class="p answer__p">Audi A7</p>
+                              <div class="answer">
+                                <input class="input input--hidden" type="checkbox" name="answer[]" value="3" id="a3"/>
+                                <label class="answer__label" for="a3">
+                                  <p class="p answer__p">net config MyCommonName=D:\USERS\MyFolder</p>
+                                </label>
                               </div>
-                              <div class="answer-assoc answer--hover-none">
-                                <input class="input answer__input--number" type="number" name="answer[]" placeholder="№" id="a4" max="4" min="1"/>
-                                <!--img(src="img/car1.png").answer__img-->
-                                <p class="p answer__p">BMW 520</p>
+                              <div class="answer">
+                                <input class="input input--hidden" type="checkbox" name="answer[]" value="4" id="a4"/>
+                                <label class="answer__label" for="a4">
+                                  <p class="p answer__p">net name MyCommonName disk=D:\USERS\MyFolder</p>
+                                </label>
                               </div>
                             </div>
                             <div class="frame__block confirm__control-panel"><a class="button button--king-blue" href="./test.html">Ответить</a><a class="button button--grey" href="./test.html">Пропустить</a></div>

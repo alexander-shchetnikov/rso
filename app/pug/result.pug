@@ -1,0 +1,37 @@
+extends layouts/admin
+include components/answers
+block variables
+    -
+        var title = "Тестирование"
+        var q_type_id = 5
+    //1 radio
+    //2 checkbox
+    //3 string
+    //4 position
+    //5 refer
+block content
+    .content__container
+        .content__main
+            .content__row
+                .container__header
+                    h2.container__h2 Управление вопросами
+                .container__body
+                    ul.list.list--type_v.admin-frame__list
+                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                            a.admin-frame__list-link(href="./admin/test/olymp-q/1") Вопросы по История
+                        li.list__list-element.list__list-element--type_h.admin-frame__list-element
+                            a.admin-frame__list-link(href="./admin/test/olymp-q/1") Вопросы по АКС
+                .container__body
+                    table.table
+                        tr.tr
+                            th.th Lorem
+                            th.th ipsum
+                            th.th dolor
+                            th.th sit
+                            th.th.table__result amet.
+                        tr.tr
+                            td.td consectetur
+                            td.td adipisicing
+                            td.td elit.
+                            td.td Fuga,
+                            td.td.table__result iusto?
